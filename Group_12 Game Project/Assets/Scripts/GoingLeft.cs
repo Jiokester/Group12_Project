@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GoingLeft : MonoBehaviour
 {
+    
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,6 @@ public class GoingLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         transform.position += Vector3.left * speed * Time.deltaTime;
     }
 }
