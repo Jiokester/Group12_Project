@@ -2,11 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< Updated upstream
-public class Enemy : MonoBehaviour
-=======
 public class VerticalEnemy : MonoBehaviour
->>>>>>> Stashed changes
 {
     //speed variable
     public float speed;
@@ -47,33 +43,6 @@ public class VerticalEnemy : MonoBehaviour
     /// </summary>
     private void EnemyMove()
     {
-<<<<<<< Updated upstream
-        if (this.gameObject.tag == "Enemy")
-        {
-            if (goingUp == true)
-            {
-                if (transform.position.y >= topPos.y)
-                {
-                    goingUp = false;
-                }
-                else
-                {
-                    transform.position += Vector3.up * speed * Time.deltaTime;
-                }
-            }
-            else
-            {
-                if (transform.position.y <= bottomPos.y)
-                {
-                    goingUp = true;
-                }
-                else
-                {
-                    transform.position += Vector3.down * speed * Time.deltaTime;
-                }
-            }
-        }    
-=======
         if (goingUp == true)
         {
             if (transform.position.y >= topPos.y)
@@ -96,19 +65,11 @@ public class VerticalEnemy : MonoBehaviour
                 transform.position += Vector3.down * speed * Time.deltaTime;
             }
         }
->>>>>>> Stashed changes
     }
 
     //Horizontal enemy movement and spawning
     private void bulletBill()
     {
-<<<<<<< Updated upstream
-        if (this.gameObject.tag == "HEnemy")
-        {
-
-        }
-    }
-=======
         transform.position += Vector3.left * speed * Time.deltaTime;
     }
     
@@ -117,5 +78,4 @@ public class VerticalEnemy : MonoBehaviour
         
     
 
->>>>>>> Stashed changes
 }

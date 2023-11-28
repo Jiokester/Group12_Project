@@ -77,7 +77,11 @@ GameObject:
   - component: {fileID: 1358047910436737732}
   m_Layer: 0
   m_Name: VerticalEnemy
+<<<<<<< Updated upstream
   m_TagString: Enemy
+=======
+  m_TagString: Obstacle
+>>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,3 +190,8 @@ MonoBehaviour:
   topPoint: {fileID: 8300684423581740004}
   bottomPoint: {fileID: 8468874420081394485}
   goingUp: 0
+<<<<<<< Updated upstream
+=======
+  leftPoint: {fileID: 0}
+  spawnPoint: {fileID: 0}
+>>>>>>> Stashed changes
