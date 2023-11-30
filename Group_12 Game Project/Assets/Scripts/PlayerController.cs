@@ -19,6 +19,10 @@ public class PlayerController : MonoBehaviour
     private float pipePointValue = 5;
     private float thiefPointValue = 3;
     private float coinsValue = 4;
+    private float hitPoints = 0;
+
+    public bool isBlinking;
+    public float blinkTime = .3f;
  
 
 
@@ -49,7 +53,16 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            SceneManager.LoadScene(1);
+            //Prevents instadeath if health is greater than 0
+            if (hitPoints > 0)
+            {
+                StartCoroutine(Blink());
+                hitPoints--;
+            }
+            else
+            {
+                SceneManager.LoadScene(1);
+            }
         }
 
         if (other.gameObject.tag == "Coin")
@@ -64,6 +77,16 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Thief has hit player");
 
             totalScore -= thiefPointValue;
+
+            other.gameObject.SetActive(false);
+        }
+        //Riley
+        //Health Pickup
+        if (other.gameObject.tag == "Health")
+        {
+            Debug.Log("Health Gained");
+
+            hitPoints++;
 
             other.gameObject.SetActive(false);
         }
@@ -88,6 +111,28 @@ public class PlayerController : MonoBehaviour
                 totalScore += pipePointValue;
             }
         }
+
+        
     }
-    
+    //Blinking coroutine 
+    public IEnumerator Blink()
+        {
+            isBlinking = true;
+            for (int index = 0; index < 12; index++)
+            {
+                if (index % 2 == 0)
+                {
+                    GetComponent<MeshRenderer>().enabled = false;
+                    
+                }
+                else
+                {
+                    GetComponent<MeshRenderer>().enabled = true;
+                }
+                yield return new WaitForSeconds(blinkTime);
+
+            }
+            GetComponent<MeshRenderer>().enabled = true;
+            isBlinking = false;
+        }
 }

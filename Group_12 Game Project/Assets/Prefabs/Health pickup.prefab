@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2758978430705364289}
   - component: {fileID: 6026390841845309364}
   - component: {fileID: 8473561769934064159}
+  - component: {fileID: 5469388036590477580}
   m_Layer: 0
   m_Name: Health pickup
   m_TagString: Health
@@ -107,6 +108,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5469388036590477580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745403328193706864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d339f83046193744880a8f5766b84b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &3203672487918594018
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,6 +133,7 @@ GameObject:
   - component: {fileID: 3600168157929871222}
   - component: {fileID: 189576602625150648}
   - component: {fileID: 7649697079305316962}
+  - component: {fileID: 910720741423087314}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -212,6 +227,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &910720741423087314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3203672487918594018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d339f83046193744880a8f5766b84b68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &3850112797511013995
 GameObject:
   m_ObjectHideFlags: 0
