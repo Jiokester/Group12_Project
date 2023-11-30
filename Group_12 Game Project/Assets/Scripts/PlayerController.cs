@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+/*
+ * Author: [Ihejirika, Chijioke]
+ * Last Updated: [11/29/2023]
+ * [Controls the players ability to jump]
+ */
+
+
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody playerRb;
     public float jumpForce;
-    public int coinsCollected;
     public float totalScore = 0;
     private float pipePointValue = 5;
+    private float thiefPointValue = 3;
+    private float coinsValue = 4;
+ 
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +32,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         playerJump();
+        PipeScore();
     }
 
     void playerJump()
@@ -42,12 +54,18 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Coin")
         {
-            coinsCollected++;
+            Debug.Log("Coin has been collected");
+
+            totalScore += coinsValue;
             other.gameObject.SetActive(false);
         }
         if (other.gameObject.tag == "Thief")
         {
             Debug.Log("Thief has hit player");
+
+            totalScore -= thiefPointValue;
+
+            other.gameObject.SetActive(false);
         }
     }
 
@@ -56,8 +74,20 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit, 300f))
         {
+            if (hit.collider.tag == "Obstacle")
+            {
+                totalScore += pipePointValue;
+            }
+           
+        }
 
-            totalScore += pipePointValue;
+        else if (Physics.Raycast(transform.position, Vector3.up, out hit, 300f))
+        {
+            if (hit.collider.tag == "Obstacle")
+            {
+                totalScore += pipePointValue;
+            }
         }
     }
+    
 }

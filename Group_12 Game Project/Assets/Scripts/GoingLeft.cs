@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+ * Author: [Ihejirika, Chijioke]
+ * Last Updated: [11/29/2023]
+ * [Objects will move towards the left f the screen and be deletd when they are offscreen]
+ */
 public class GoingLeft : MonoBehaviour
 {
     
