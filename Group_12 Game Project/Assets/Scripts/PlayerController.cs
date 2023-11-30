@@ -53,15 +53,22 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Obstacle")
         {
-            //Prevents instadeath if health is greater than 0
-            if (hitPoints > 0)
+            if (isBlinking == false)
             {
-                StartCoroutine(Blink());
-                hitPoints--;
+                //Prevents instadeath if health is greater than 0
+                if (hitPoints > 0)
+                {
+                    StartCoroutine(Blink());
+                    hitPoints--;
+                }
+                else
+                {
+                    SceneManager.LoadScene(1);
+                }
             }
             else
             {
-                SceneManager.LoadScene(1);
+                //Nothing if Blinking
             }
         }
 
