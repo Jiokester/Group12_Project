@@ -15,17 +15,12 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody playerRb;
     public float jumpForce;
-<<<<<<< Updated upstream
     public float totalScore = 0;
     private float pipePointValue = 5;
     private float thiefPointValue = 3;
     private float coinsValue = 4;
-=======
-    public int coinsValue = 4;
-    public float totalScore = 0;
-    private float pipePointValue = 5;
-    private float thiefPointValue = 3;
->>>>>>> Stashed changes
+ 
+
 
     // Start is called before the first frame update
     void Start()
@@ -59,21 +54,18 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Coin")
         {
-<<<<<<< Updated upstream
-=======
             Debug.Log("Coin has been collected");
->>>>>>> Stashed changes
+
             totalScore += coinsValue;
             other.gameObject.SetActive(false);
         }
         if (other.gameObject.tag == "Thief")
         {
-<<<<<<< Updated upstream
-
-=======
             Debug.Log("Thief has hit player");
->>>>>>> Stashed changes
+
             totalScore -= thiefPointValue;
+
+            other.gameObject.SetActive(false);
         }
     }
 
