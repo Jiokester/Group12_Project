@@ -61,9 +61,13 @@ public class PlayerController : MonoBehaviour
                     StartCoroutine(Blink());
                     hitPoints--;
                 }
-                else
+                else 
                 {
-                    SceneManager.LoadScene(1);
+                    if (hitPoints == 0)
+                    {
+                        SceneManager.LoadScene(1);
+                    }
+                    
                 }
             }
             else

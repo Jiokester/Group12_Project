@@ -5,7 +5,7 @@ using UnityEngine;
 
 /*
  * Author: [Ihejirika, Chijioke]
- * Last Updated: [11/29/2023]
+ * Last Updated: [12/5/2023]
  * [Objects will move towards the left f the screen and be deletd when they are offscreen]
  */
 public class GoingLeft : MonoBehaviour
@@ -23,5 +23,10 @@ public class GoingLeft : MonoBehaviour
     void Update()
     {
          transform.position += Vector3.left * speed * Time.deltaTime;
+
+        if (transform.position.x < -20)
+        {
+            Destroy(gameObject);
+        }
     }
 }
