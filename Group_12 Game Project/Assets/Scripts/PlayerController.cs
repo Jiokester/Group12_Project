@@ -112,6 +112,11 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
             Debug.Log("Player has been teleported to the next scene");
         }
+
+        if (other.gameObject.tag == "Bounds")
+        {
+            SceneManager.LoadScene(2);
+        }
         
     }
 

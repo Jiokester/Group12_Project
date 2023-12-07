@@ -9,6 +9,7 @@ TagManager:
   - Thief
   - Health
   - Portal
+  - Bounds
   layers:
   - Default
   - TransparentFX
