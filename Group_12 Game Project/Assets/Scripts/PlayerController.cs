@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if (hitPoints == 0)
                     {
-                        SceneManager.LoadScene(1);
+                        SceneManager.LoadScene(3);
                         
                     }
                     
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Bounds")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
         
     }
