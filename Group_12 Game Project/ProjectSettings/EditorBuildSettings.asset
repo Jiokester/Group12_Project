@@ -12,11 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 2.unity
     guid: 90cdbcb9b7cd94e8c9388e41c0045cec
   - enabled: 1
-<<<<<<< Updated upstream
     path: Assets/Scenes/Level 3.unity
     guid: 95694b71471524f549c1955202f99f21
-=======
+  - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: d9363f6b0c480094e96b0d07da846403
->>>>>>> Stashed changes
   m_configObjects: {}
