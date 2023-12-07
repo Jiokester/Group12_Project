@@ -6,7 +6,7 @@ using UnityEngine;
 /*
  * Author: [Ihejirika, Chijioke]
  * Last Updated: [12/5/2023]
- * [Objects will move towards the left f the screen and be deletd when they are offscreen]
+ * [Objects will move towards the left of the screen and be deletd when they are offscreen]
  */
 public class GoingLeft : MonoBehaviour
 {

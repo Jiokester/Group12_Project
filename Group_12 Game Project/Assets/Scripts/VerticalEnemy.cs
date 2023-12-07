@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* Author: Riley Conlon
+ * Date:12/7/23
+ * Function:Allow the Vertical Enemy to move up and down
+ */
+
 public class VerticalEnemy : MonoBehaviour
 {
     //speed variable
@@ -16,10 +21,6 @@ public class VerticalEnemy : MonoBehaviour
     //T/F goingUp
     public bool goingUp;
 
-    //Left point variables
-    private Vector3 leftPos;
-    public GameObject leftPoint;
-
     //spawnpoint
     public GameObject spawnPoint;
 
@@ -28,7 +29,6 @@ public class VerticalEnemy : MonoBehaviour
     {
         topPos = topPoint.transform.position;
         bottomPos = bottomPoint.transform.position;
-        leftPos = leftPoint.transform.position;
     }
 
     // Update is called once per frame
@@ -66,16 +66,5 @@ public class VerticalEnemy : MonoBehaviour
             }
         }
     }
-
-    //Horizontal enemy movement and spawning
-    private void bulletBill()
-    {
-        transform.position += Vector3.left * speed * Time.deltaTime;
-    }
-    
-
-
-        
-    
 
 }

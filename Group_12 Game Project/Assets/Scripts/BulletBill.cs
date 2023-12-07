@@ -32,46 +32,16 @@ public class BulletBill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Move to goingLeft script
-        //bulletBill();
-        VerticalEnemy();
+        
+        bulletBill();
+        
     }
 
     //Move to goingLeft
     private void bulletBill()
     {
-        //transform.position += Vector3.left * speed * Time.deltaTime;
+        transform.position += Vector3.left * speed * Time.deltaTime;
     }
 
-    public void VerticalEnemy()
-    {
-        if (goingUp == true)
-        {
-            if (transform.position.y >= topPos.y)
-            {
-                transform.position += Vector3.down * speed * Time.deltaTime;
-                goingUp = false;
-
-            }
-            else
-            {
-                transform.position += Vector3.up * speed * Time.deltaTime;
-                goingUp = true;
-            }
-        }
-        else
-        {
-            if (transform.position.y <= bottomPos.y)
-            {
-                transform.position += Vector3.up * speed * Time.deltaTime;
-                goingUp = true;
-            }
-            else
-            {
-                transform.position += Vector3.down * speed * Time.deltaTime;
-                goingUp = false;
-            }
-        }
-
-    }
+    
 }
