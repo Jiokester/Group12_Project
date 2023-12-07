@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
                     if (hitPoints == 0)
                     {
                         SceneManager.LoadScene(1);
+                        
                     }
                     
                 }
@@ -101,6 +102,17 @@ public class PlayerController : MonoBehaviour
 
             other.gameObject.SetActive(false);
         }
+
+        ///Jioke
+        //Portal Transportation to next scene
+
+        if (other.gameObject.tag == "Portal")
+        {
+            ///Load the next scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+            Debug.Log("Player has been teleported to the next scene");
+        }
+        
     }
 
     void PipeScore()
